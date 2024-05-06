@@ -1,6 +1,5 @@
 package com.gunder.market.component
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
@@ -24,7 +23,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -34,7 +32,7 @@ import com.gunder.market.ui.theme.MarketTheme
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopBar(modifier: Modifier = Modifier) {
-    Column (modifier = Modifier.padding(10.dp).background(color = Color.Gray)){
+    Column (modifier = Modifier.padding(10.dp)){
         Row (
             verticalAlignment = Alignment.CenterVertically,
             modifier = Modifier.width(IntrinsicSize.Min),
@@ -53,7 +51,11 @@ fun TopBar(modifier: Modifier = Modifier) {
             Icon(imageVector = Icons.Outlined.ShoppingCart, contentDescription = null )
             Icon(imageVector = Icons.Outlined.Menu, contentDescription = null )
         }
-        Row (horizontalArrangement = Arrangement.spacedBy(5.dp), verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(top = 4.dp, bottom = 4.dp)){
+        Row (
+            horizontalArrangement = Arrangement.spacedBy(5.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.padding(top = 4.dp, bottom = 4.dp)
+        ){
             Icon(imageVector = Icons.Outlined.LocationOn, contentDescription = null,modifier.size(20.dp) )
             Text(text = "Di kirim ke alamat", fontSize = 12.sp)
             Text(text = "Faisal Yulianto", fontSize = 12.sp, fontWeight = FontWeight.Bold)

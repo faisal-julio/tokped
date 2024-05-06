@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
+import com.gunder.market.component.TopBar
 import com.gunder.market.ui.theme.MarketTheme
 
 class MainActivity : ComponentActivity() {
@@ -38,7 +39,8 @@ fun MarketApp(modifier: Modifier = Modifier) {
         modifier = modifier
             .verticalScroll(rememberScrollState())
     ) {
-//        your code compose here
+//        Top your code compose here
+        TopBar()
     }
 
 }
